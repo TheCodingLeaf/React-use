@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Counter from './Components/Counter/Counter'
 import './App.css'
 import Toggle from './Components/Toggle/Toggle'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  function Welcome() {
+    console.log('Velkommen til appen!')
+  }
+
+  useEffect(() => {
+    Welcome()
+  }, [])
 
   return (
     <>
