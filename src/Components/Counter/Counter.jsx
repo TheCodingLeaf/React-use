@@ -1,7 +1,13 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Der er klikket ${count} gange`;
+    console.log('kliks:', count);
+  }, [count]);
 
   return (
     <div>
